@@ -42,7 +42,7 @@ function reverseStack(stack) {
 
 function main() {
     // Create a sample stack
-    let stack = [4, 1, 3, 2];
+    let stack = [1,2,3,4];
 
     // Reverse the stack
     reverseStack(stack);
