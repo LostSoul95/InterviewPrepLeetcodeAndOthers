@@ -27,6 +27,7 @@ var findContentChildren = function(g, s) {
     var l = 0;
     var r = 0;
     while(l < g.length && r < s.length){
+        // greed factor less than size of cookie
         if(g[l]<= s[r]){
             r++;
         }
