@@ -7,7 +7,9 @@ function kadanesAlgorithm(arr) {
     let maxEndingHere = arr[0];
     
     for (let i = 1; i < arr.length; i++) {
+        // Update maxEndingHere to be the maximum of the current element or the sum of maxEndingHere and the current element
         maxEndingHere = Math.max(arr[i], maxEndingHere + arr[i]);
+        // Update maxSoFar to be the maximum of maxSoFar and maxEndingHereß
         maxSoFar = Math.max(maxSoFar, maxEndingHere);
     }
     
