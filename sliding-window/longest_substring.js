@@ -3,18 +3,18 @@
 // Space Complexity: O(min(m,n)) where m is the size of the character set
 
 function lengthOfLongestSubstring(s) {
-    const seen = new Map();
+    const seen = {};
     let start = 0;
     let maxLength = 0;
-    
+
     for (let end = 0; end < s.length; end++) {
-        if (seen.has(s[end])) {
-            start = Math.max(start, seen.get(s[end]) + 1);
+        if (s[end] in seen) {
+            start = Math.max(start, seen[s[end]] + 1);
         }
-        seen.set(s[end], end);
+        seen[s[end]] = end;
         maxLength = Math.max(maxLength, end - start + 1);
     }
-    
+
     return maxLength;
 }
 
